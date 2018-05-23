@@ -1,6 +1,6 @@
 @extends("layout")
 @section("content")
-    {{dd($services)}}
+
     <div id="inOut">
         <label class="switch">
             <input type="checkbox">
@@ -13,9 +13,20 @@
             <i class="fas fa-chevron-left"></i>
         </div>
 
+
         <div id="servicesHome">
             <div id="servicesTop">
-                <div id="bttnRestaurant" class="bttnServices"><p>Restaurants</p></div>
+
+                @php
+                $var=0;
+                @endphp
+                {{ $var }}
+            @foreach($services as $service)
+
+            @endforeach
+            </div>
+            <div id="servicesTop">
+                <div id="bttnRestaurant" class="bttnServices"><p>{{$services[0]->name}}</p></div>
                 <div id="bttnSnackDrink" class="bttnServices"><p>Snacks and drinks</p></div>
             </div>
             <div id="servicesBottom">
